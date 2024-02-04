@@ -1,0 +1,16 @@
+{% extends 'app_1/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h1> "{{ title }}" :</h1>
+<ul>
+    {% for post in posts %}
+        {% if post.is_published %}
+            <li><a href="{% url 'get_post' post_id=post.pk %}">Post id: {{ post.id}} {{ post }}</a></li>
+        {% else %}
+            <li>{{ post }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock %}

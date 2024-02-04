@@ -1,0 +1,16 @@
+{% extends 'app_1/base.html' %}
+
+{% block title %} пост {% endblock %}
+
+{% block content %}
+    <h3>{{ post.title }}</h3>
+<!--    <table>-->
+<!--        {% for key, value in post.items %}-->
+<!--            <tr>-->
+<!--                <td>{{ key }}</td>-->
+<!--                <td>{{ value }}</td>-->
+<!--            </tr>-->
+<!--        {% endfor %}-->
+<!--    </table>-->
+    <p>{{ post.content }}</p>
+{% endblock %}
